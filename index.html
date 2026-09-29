@@ -1,71 +1,142 @@
 ```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boletim Digital</title>
 
-    <!-- Ligação com o arquivo de estilos -->
+    <title>Boletim Digital - 9º Ano</title>
+
+    <!-- Arquivo de estilos -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Cabeçalho -->
     <header class="cabecalho">
-        <h1>📚 Boletim Digital</h1>
-        <p>Acompanhe suas notas escolares</p>
+        <div class="cabecalho-conteudo">
+            <h1>📚 Boletim Digital</h1>
+            <p>9º Ano</p>
+        </div>
     </header>
 
     <main class="container">
 
-        <!-- Informações do aluno -->
+        <!-- Identificação fictícia -->
         <section class="aluno">
-            <h2>👨‍🎓 João da Silva</h2>
-            <p>Turma: 9º Ano A</p>
-            <p>Ano letivo: 2026</p>
+            <div>
+                <span class="etiqueta">ESTUDANTE</span>
+                <h2>Estudante Exemplo</h2>
+                <p>Boletim escolar • 9º Ano</p>
+            </div>
         </section>
 
-        <h2 class="titulo-materias">Minhas Matérias</h2>
+        <!-- Cards de resumo -->
+        <section class="resumo">
 
-        <!-- Cards das matérias -->
-        <section class="materias">
-
-            <div class="card">
-                <h3>📐 Matemática</h3>
-                <p>Nota: <strong>8,5</strong></p>
-                <p>Frequência: 92%</p>
+            <div class="resumo-card">
+                <div class="icone">📊</div>
+                <div>
+                    <span class="resumo-titulo">Média geral</span>
+                    <strong id="mediaGeral">—</strong>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>📖 Português</h3>
-                <p>Nota: <strong>9,0</strong></p>
-                <p>Frequência: 95%</p>
+            <div class="resumo-card">
+                <div class="icone">📝</div>
+                <div>
+                    <span class="resumo-titulo">Total de faltas</span>
+                    <strong id="totalFaltas">—</strong>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>🌎 Geografia</h3>
-                <p>Nota: <strong>8,0</strong></p>
-                <p>Frequência: 90%</p>
+            <div class="resumo-card">
+                <div class="icone">⭐</div>
+                <div>
+                    <span class="resumo-titulo">Bom desempenho</span>
+                    <strong id="bomDesempenho">—</strong>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>🔬 Ciências</h3>
-                <p>Nota: <strong>9,2</strong></p>
-                <p>Frequência: 97%</p>
+            <div class="resumo-card">
+                <div class="icone">⚠️</div>
+                <div>
+                    <span class="resumo-titulo">Precisam de atenção</span>
+                    <strong id="precisamAtencao">—</strong>
+                </div>
+            </div>
+
+            <div class="resumo-card frequencia-card">
+                <div class="icone">📅</div>
+                <div>
+                    <span class="resumo-titulo">Frequência</span>
+                    <strong id="frequencia">92%</strong>
+                    <small id="frequenciaTexto">Frequência adequada</small>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Título da tabela -->
+        <section class="boletim">
+            <div class="titulo-secao">
+                <div>
+                    <span class="etiqueta">DESEMPENHO ESCOLAR</span>
+                    <h2>Notas e frequência</h2>
+                </div>
+
+                <span class="escala">Escala: 0 a 10</span>
+            </div>
+
+            <!-- Tabela responsiva -->
+            <div class="tabela-container">
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Disciplina</th>
+                            <th>1º Tri</th>
+                            <th>2º Tri</th>
+                            <th>3º Tri</th>
+                            <th>Média</th>
+                            <th>Faltas</th>
+                            <th>Situação</th>
+                        </tr>
+                    </thead>
+
+                    <!--
+                        O JavaScript vai criar as 15 linhas aqui.
+                    -->
+                    <tbody id="tabelaBoletim"></tbody>
+
+                </table>
+            </div>
+
+            <!-- Mensagem sobre dados fictícios -->
+            <div class="aviso">
+                <strong>ℹ️ Dados demonstrativos</strong>
+                <p>
+                    Este boletim utiliza somente dados fictícios para demonstração.
+                    A frequência de 92% também é apenas demonstrativa.
+                </p>
             </div>
 
         </section>
 
     </main>
 
+    <!-- Rodapé -->
     <footer>
-        <p>Boletim Digital • Dados fictícios</p>
+        <p>📚 Boletim Digital • 9º Ano</p>
+        <p>Dados fictícios para demonstração</p>
     </footer>
 
-    <!-- Ligação com o JavaScript -->
+    <!-- Arquivo JavaScript -->
     <script src="script.js"></script>
 
 </body>
+
 </html>
 ```
