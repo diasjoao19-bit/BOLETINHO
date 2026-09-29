@@ -1,0 +1,132 @@
+```css
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eaf6ff;
+    color: #17324d;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background: #1479d1;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cabecalho h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.cabecalho p {
+    font-size: 18px;
+}
+
+/* Área principal */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* Informações do aluno */
+.aluno {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 35px;
+    box-shadow: 0 6px 18px rgba(20, 121, 209, 0.15);
+    border-left: 8px solid #1479d1;
+}
+
+.aluno h2 {
+    color: #1479d1;
+    margin-bottom: 12px;
+}
+
+.aluno p {
+    margin: 6px 0;
+}
+
+/* Título das matérias */
+.titulo-materias {
+    color: #1479d1;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Área dos cards */
+.materias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Cards das matérias */
+.card {
+    background: linear-gradient(135deg, #ffffff, #ccecff);
+    border-radius: 25px;
+    padding: 35px;
+    min-height: 180px;
+    box-shadow: 0 8px 20px rgba(20, 121, 209, 0.18);
+    border: 2px solid #9edcff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(20, 121, 209, 0.25);
+}
+
+.card h3 {
+    color: #0965b5;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card p {index.html
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.card strong {
+    color: #1479d1;
+    font-size: 24px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background: #1479d1;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Adaptação para celular */
+@media (max-width: 700px) {
+
+    .cabecalho h1 {
+        font-size: 30px;
+    }
+
+    .materias {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .container {
+        width: 92%;
+    }
+}
+```
