@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -18,112 +18,141 @@
     <header class="cabecalho">
         <div class="cabecalho-conteudo">
             <h1>📚 Boletim Digital</h1>
-            <p>9º Ano</p>
+            <p>9º Ano • Turma 9C</p>
         </div>
     </header>
 
     <main class="container">
 
-        <!-- Identificação fictícia -->
-        <section class="aluno">
+        <!-- Tela de Acesso pelo PIN -->
+        <section id="areaAcesso" class="aluno">
             <div>
-                <span class="etiqueta">ESTUDANTE</span>
-                <h2>Estudante Exemplo</h2>
-                <p>Boletim escolar • 9º Ano</p>
+                <span class="etiqueta">ACESSO AO BOLETIM</span>
+                <h2>Identificação do Estudante</h2>
+                <p>Turma <strong>9C</strong> • Chamada nº <strong>38</strong></p>
             </div>
+            <div class="pin-form">
+                <input type="password" id="inputPin" placeholder="Digite seu PIN" maxlength="20" />
+                <button type="button" id="btnEntrar" class="btn-principal">Entrar</button>
+            </div>
+            <p id="mensagemAcesso" class="mensagem-status"></p>
         </section>
 
-        <!-- Cards de resumo -->
-        <section class="resumo">
+        <!-- Conteúdo do Boletim (Oculto antes do login) -->
+        <div id="conteudoBoletim" style="display: none;">
 
-            <div class="resumo-card">
-                <div class="icone">📊</div>
-                <div>
-                    <span class="resumo-titulo">Média geral</span>
-                    <strong id="mediaGeral">—</strong>
+            <!-- Identificação fictícia -->
+            <section class="aluno">
+                <div class="aluno-cabecalho">
+                    <div>
+                        <span class="etiqueta">ESTUDANTE</span>
+                        <h2>Estudante Exemplo</h2>
+                        <p>Boletim escolar • 9º Ano • Turma 9C • Chamada nº 38</p>
+                    </div>
+                    <button type="button" id="btnEditar" class="btn-secundario">Alterar dados</button>
                 </div>
-            </div>
+            </section>
 
-            <div class="resumo-card">
-                <div class="icone">📝</div>
-                <div>
-                    <span class="resumo-titulo">Total de faltas</span>
-                    <strong id="totalFaltas">—</strong>
-                </div>
-            </div>
+            <!-- Cards de resumo -->
+            <section class="resumo">
 
-            <div class="resumo-card">
-                <div class="icone">⭐</div>
-                <div>
-                    <span class="resumo-titulo">Bom desempenho</span>
-                    <strong id="bomDesempenho">—</strong>
-                </div>
-            </div>
-
-            <div class="resumo-card">
-                <div class="icone">⚠️</div>
-                <div>
-                    <span class="resumo-titulo">Precisam de atenção</span>
-                    <strong id="precisamAtencao">—</strong>
-                </div>
-            </div>
-
-            <div class="resumo-card frequencia-card">
-                <div class="icone">📅</div>
-                <div>
-                    <span class="resumo-titulo">Frequência</span>
-                    <strong id="frequencia">92%</strong>
-                    <small id="frequenciaTexto">Frequência adequada</small>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Título da tabela -->
-        <section class="boletim">
-            <div class="titulo-secao">
-                <div>
-                    <span class="etiqueta">DESEMPENHO ESCOLAR</span>
-                    <h2>Notas e frequência</h2>
+                <div class="resumo-card">
+                    <div class="icone">📊</div>
+                    <div>
+                        <span class="resumo-titulo">Média geral</span>
+                        <strong id="mediaGeral">—</strong>
+                    </div>
                 </div>
 
-                <span class="escala">Escala: 0 a 10</span>
-            </div>
+                <div class="resumo-card">
+                    <div class="icone">📝</div>
+                    <div>
+                        <span class="resumo-titulo">Total de faltas</span>
+                        <strong id="totalFaltas">—</strong>
+                    </div>
+                </div>
 
-            <!-- Tabela responsiva -->
-            <div class="tabela-container">
-                <table>
+                <div class="resumo-card">
+                    <div class="icone">⭐</div>
+                    <div>
+                        <span class="resumo-titulo">Bom desempenho</span>
+                        <strong id="bomDesempenho">—</strong>
+                    </div>
+                </div>
 
-                    <thead>
-                        <tr>
-                            <th>Disciplina</th>
-                            <th>1º Tri</th>
-                            <th>2º Tri</th>
-                            <th>3º Tri</th>
-                            <th>Média</th>
-                            <th>Faltas</th>
-                            <th>Situação</th>
-                        </tr>
-                    </thead>
+                <div class="resumo-card">
+                    <div class="icone">⚠️</div>
+                    <div>
+                        <span class="resumo-titulo">Precisam de atenção</span>
+                        <strong id="precisamAtencao">—</strong>
+                    </div>
+                </div>
 
-                    <!--
-                        O JavaScript vai criar as 15 linhas aqui.
-                    -->
-                    <tbody id="tabelaBoletim"></tbody>
+                <div class="resumo-card frequencia-card">
+                    <div class="icone">📅</div>
+                    <div>
+                        <span class="resumo-titulo">Frequência</span>
+                        <strong id="frequencia">92%</strong>
+                        <small id="frequenciaTexto">Frequência adequada</small>
+                    </div>
+                </div>
 
-                </table>
-            </div>
+            </section>
 
-            <!-- Mensagem sobre dados fictícios -->
-            <div class="aviso">
-                <strong>ℹ️ Dados demonstrativos</strong>
-                <p>
-                    Este boletim utiliza somente dados fictícios para demonstração.
-                    A frequência de 92% também é apenas demonstrativa.
-                </p>
-            </div>
+            <!-- Título da tabela -->
+            <section class="boletim">
+                <div class="titulo-secao">
+                    <div>
+                        <span class="etiqueta">DESEMPENHO ESCOLAR</span>
+                        <h2>Notas e frequência</h2>
+                    </div>
 
-        </section>
+                    <span class="escala">Escala: 0 a 10</span>
+                </div>
+
+                <p id="mensagemEdicao" class="mensagem-status"></p>
+
+                <!-- Tabela responsiva -->
+                <div class="tabela-container">
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Disciplina</th>
+                                <th>1º Tri</th>
+                                <th>2º Tri</th>
+                                <th>3º Tri</th>
+                                <th>Média</th>
+                                <th>Faltas</th>
+                                <th>Situação</th>
+                            </tr>
+                        </thead>
+
+                        <!--
+                            O JavaScript vai criar as linhas aqui.
+                        -->
+                        <tbody id="tabelaBoletim"></tbody>
+
+                    </table>
+                </div>
+
+                <div id="painelEdicaoBotoes" class="painel-botoes" style="display: none;">
+                    <button type="button" id="btnSalvar" class="btn-principal">Salvar alterações</button>
+                    <button type="button" id="btnCancelar" class="btn-secundario">Cancelar</button>
+                </div>
+
+                <!-- Mensagem sobre dados fictícios -->
+                <div class="aviso">
+                    <strong>ℹ️ Dados demonstrativos</strong>
+                    <p>
+                        Este boletim utiliza somente dados fictícios para demonstração.
+                        A frequência de 92% também é apenas demonstrativa.
+                    </p>
+                </div>
+
+            </section>
+
+        </div>
 
     </main>
 
@@ -139,4 +168,3 @@
 </body>
 
 </html>
-```
