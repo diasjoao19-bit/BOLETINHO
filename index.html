@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -99,6 +98,42 @@
 
             </section>
 
+            <!-- Área de gráficos -->
+            <section class="area-graficos" aria-label="Gráficos de desempenho">
+
+                <article class="grafico-card">
+                    <div class="grafico-cabecalho">
+                        <span class="etiqueta">DESEMPENHO</span>
+                        <h2>Média por disciplina</h2>
+                    </div>
+                    <div class="grafico-container grafico-container-medios">
+                        <canvas id="graficoMediasDisciplinas" role="img" aria-label="Gráfico de barras horizontais com a média atual de cada disciplina"></canvas>
+                    </div>
+                </article>
+
+                <article class="grafico-card">
+                    <div class="grafico-cabecalho">
+                        <span class="etiqueta">EVOLUÇÃO</span>
+                        <h2>Evolução da média geral</h2>
+                    </div>
+                    <div class="grafico-container">
+                        <canvas id="graficoEvolucaoTrimestres" role="img" aria-label="Gráfico de linha com a evolução da média geral nos três trimestres"></canvas>
+                    </div>
+                </article>
+
+                <article class="grafico-card" id="cardGraficoFaltas">
+                    <div class="grafico-cabecalho">
+                        <span class="etiqueta">FREQUÊNCIA</span>
+                        <h2>Faltas por trimestre</h2>
+                        <span id="badgePerigo" class="badge-perigo" hidden>Perigo</span>
+                    </div>
+                    <div class="grafico-container">
+                        <canvas id="graficoFaltasTrimestres" role="img" aria-label="Gráfico de barras com as faltas somadas de cada trimestre"></canvas>
+                    </div>
+                </article>
+
+            </section>
+
             <!-- Título da tabela -->
             <section class="boletim">
                 <div class="titulo-secao">
@@ -161,6 +196,9 @@
         <p>📚 Boletim Digital • 9º Ano</p>
         <p>Dados fictícios para demonstração</p>
     </footer>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Arquivo JavaScript -->
     <script src="script.js"></script>
